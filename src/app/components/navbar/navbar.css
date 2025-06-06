@@ -1,60 +1,53 @@
-.topbar {
+.top-bar {
   @apply bg-black text-white flex flex-col md:flex-row justify-around items-center text-center gap-2 p-2 text-[10px] sm:text-sm;
 }
 
-.selectbox{
-    @apply border border-white bg-black text-white text-[10px] sm:text-sm p-1 rounded text-center
+.select-box {
+  @apply border border-white bg-black text-white text-[10px] sm:text-sm p-1 rounded text-center;
 }
 
-.navbar{
-  @apply flex justify-around items-center h-20
+.navbar {
+  @apply flex justify-around items-center h-20;
 }
 
-.brandName{
-  @apply text-sm sm:text-xl font-bold hover:cursor-pointer
+.brand-name {
+  @apply text-sm sm:text-xl font-bold hover:cursor-pointer;
 }
 
-.navLinks{
-  @apply hidden md:flex justify-between items-center text-sm hover:cursor-pointer
+.nav-links {
+  @apply hidden md:flex justify-between items-center text-sm hover:cursor-pointer;
 }
 
-.navLinks li{
-   @apply px-4 py-2 rounded-sm transition-all duration-300 hover:bg-light;
+.nav-links li {
+  @apply px-4 py-2 rounded-sm transition-all duration-300 hover:bg-light;
 }
-.categories{
-  @apply flex justify-center items-center
-}
-
-.searchboxAndIcons{
-  @apply flex justify-between items-center gap-2 sm:gap-4 hover:cursor-pointer 
+.categories {
+  @apply flex justify-center items-center;
 }
 
-.inputbox{
-  @apply flex justify-center items-center p-1 sm:p-2 rounded-sm bg-light gap-2 text-[10px] sm:text-sm
-
+.searchbox-and-icons {
+  @apply flex justify-between items-center gap-2 sm:gap-4 hover:cursor-pointer;
 }
 
-.inputbox input{
-  @apply  border-none outline-none placeholder:text-[9px] sm:placeholder:text-[12px]
+.input-box {
+  @apply flex justify-center items-center p-1 sm:p-2 rounded-sm bg-light text-[10px] sm:text-sm;
 }
 
-
-.icons{
- @apply  flex justify-between items-center gap-2 sm:gap-4 
+.input-box input {
+  @apply border-none outline-none placeholder:text-[9px] sm:placeholder:text-[12px];
 }
 
-.close{
- @apply z-10 block md:hidden cursor-pointer text-black
+.icons {
+  @apply flex justify-between items-center gap-2 sm:gap-4;
+}
+.icon-wrapper {
+  @apply p-2  z-50 hover:cursor-pointer block md:hidden text-black;
 }
 
-.on{
-  @apply z-10 block md:hidden cursor-pointer
+.responsive-category {
+  @apply w-full sm:w-[50%] h-screen fixed top-0 flex justify-center items-center gap-10 flex-col bg-white md:hidden hover:cursor-pointer transition-all duration-500 ease-in-out;
 }
 
-.responsiveCategory{
-  @apply w-[60%] h-screen fixed top-0 flex justify-center items-center gap-10 flex-col bg-white md:hidden hover:cursor-pointer transition-all duration-500 ease-in-out
-}
-
-.responsiveCategory li {
+.responsive-category li {
   @apply text-center px-6 py-2 rounded-sm transition-all duration-300 hover:bg-light;
 }
