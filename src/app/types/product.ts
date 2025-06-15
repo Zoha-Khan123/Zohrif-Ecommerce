@@ -9,3 +9,8 @@ export interface Product {
   isLiked?: boolean,
   views?: number;     
 }
+
+export interface ButtonProps {
+  customStyle?: string;
+  children: React.ReactNode;
+}

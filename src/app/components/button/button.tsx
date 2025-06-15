@@ -1,13 +1,16 @@
+import { ButtonProps } from '@/app/types/product'
 import React from 'react'
 
-const Button = () => {
+
+
+const Button: React.FC<ButtonProps> = ({ customStyle, children }) => {
   return (
-    <div>
-        <div className=''>
-            <p className='bg-red text-white w-[200px] h-5'>View All Products</p>
+        <div className='flex justify-center items-center'>
+            <button className={`${customStyle} text-white rounded-sm text-sm px-5 py-2`}>{children}</button>
         </div>
-    </div>
+   
   )
 }
 
 export default Button
+

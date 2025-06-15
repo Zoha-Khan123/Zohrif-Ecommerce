@@ -15,10 +15,10 @@ const Navbar = () => {
       {/* Top-bar */}
       <div className="top-bar">
         <p>Carry Confidence with Zohrif Wallets Free Shipping + 50% Off for a Limited Time </p>
-        <select className="select-box">
+        {/* <select className="select-box">
           <option>English</option>
           <option>Urdu</option>
-        </select>
+        </select> */}
       </div>
 
       {/* Navbar */}
@@ -39,12 +39,12 @@ const Navbar = () => {
           <CiHeart /><PiShoppingCart />
           <div><MdOutlineAccountCircle /></div>
           </div>
-        </div>
-
         {/* Icon wrapper */}
         <div className="icon-wrapper">
           {toggle ? (<IoMdClose onClick={() => setToggle(false)} />) : (<FaBars onClick={() => setToggle(true)} />)}
         </div>
+        </div>
+
 
       </div>
 

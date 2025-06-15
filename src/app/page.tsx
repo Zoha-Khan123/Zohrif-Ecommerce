@@ -5,12 +5,10 @@ import Today from './components/today/today'
 
 const page = () => {
   return (
-    <div>
-      
+    <>
       <HeroSlider/>
       <Today/>
-   
-    </div>
+    </>
   )
 }
 

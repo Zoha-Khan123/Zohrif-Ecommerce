@@ -33,16 +33,16 @@ export default function ProductCard({
 
           {/* Discount */}
           <div className="absolute top-2 left-2">
-            <div className="bg-red text-white rounded-sm p-9 w-15 h-6 flex justify-center items-center">
+            <div className="bg-red text-white rounded-sm py-1 px-2 flex justify-center items-center">
               <p>{discount}%</p>
             </div>
           </div>
 
           {/* Icons */}
-          <div className="flex flex-col gap-4 top-2 right-2 absolute">
+          <div className="flex flex-col gap-2 top-2 right-2 absolute">
             <button
               onClick={() => setLiked(!liked)}
-              className="bg-white flex justify-center items-center p-5 w-7 h-7 rounded-full shadow hover:text-red-500 transition"
+              className="bg-white flex justify-center items-center p-2 rounded-full shadow hover:text-red-500 transition"
               aria-label="Like product"
             >
               <Heart
@@ -51,7 +51,7 @@ export default function ProductCard({
             </button>
 
             <button
-              className="bg-white flex justify-center items-center p-5 w-7 h-7 rounded-full shadow hover:text-blue-500 transition"
+              className="bg-white flex justify-center items-center p-2 rounded-full shadow hover:text-blue-500 transition"
               aria-label="View product"
             >
               <Eye className="w-4 h-4" />
@@ -62,10 +62,10 @@ export default function ProductCard({
 
       {/* Product Name */}
       <div>
-        <h1 className="text-sm">{name}</h1>
+        <h1 className="text-[10px] sm:text-sm">{name}</h1>
         <div className="flex gap-2">
-          <p className="text-red">{price}</p>
-          <p className="text-gray-500 line-through">{oldPrice}</p>
+          <p className="text-red text-[10px] sm:text-sm">{price}</p>
+          <p className="text-gray-500 line-through text-[10px] sm:text-sm">{oldPrice}</p>
         </div>
         <div className="flex items-center gap-1 text-yellow-500 text-sm">
           {Array.from({ length: 5 }).map((_, i) => (
