@@ -1,0 +1,18 @@
+
+.timer-box{
+   @apply flex gap-4
+}
+
+.timer-count-and-colon{
+    @apply flex gap-4 sm:gap-6
+}
+.timer-day{
+    @apply text-[13px] sm:text-sm
+}
+.timer-count{
+    @apply font-extrabold text-xl sm:text-3xl
+}
+
+.colon{
+    @apply  text-red font-bold text-2xl
+}

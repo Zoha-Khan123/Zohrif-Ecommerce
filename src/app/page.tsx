@@ -1,10 +1,15 @@
 import React from 'react'
-import Navbar from './components/navbar/navbar'
+import HeroSlider from './components/hero/hero'
+import Today from './components/today/today'
+
 
 const page = () => {
   return (
     <div>
-      <Navbar/>
+      
+      <HeroSlider/>
+      <Today/>
+   
     </div>
   )
 }
