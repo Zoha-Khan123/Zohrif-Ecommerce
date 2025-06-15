@@ -14,7 +14,6 @@ export default function ProductCard({
   rating,
   reviews,
   isLiked,
-  views,
 }: Product) {
   const [liked, setLiked] = useState(isLiked);
 

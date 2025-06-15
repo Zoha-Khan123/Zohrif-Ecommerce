@@ -5,8 +5,9 @@ import ProductSlider from "../product/productSlider";
 import Timer from "../timer/timer";
 import SliderArrow from "../product/sliderArrow";
 import "keen-slider/keen-slider.min.css";
+import { KeenSliderInstance } from "keen-slider";
 const Today = () => {
-  const instanceRef = useRef<any>(null);
+  const instanceRef = useRef<KeenSliderInstance | null>(null);
 
   return (
     <div className="flex flex-col gap-10">

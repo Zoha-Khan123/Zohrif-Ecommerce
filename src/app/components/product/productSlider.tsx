@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useKeenSlider } from "keen-slider/react";
+import { KeenSliderInstance, useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { products } from "@/app/data/product";
 import ProductCard from "./productCard";
@@ -9,7 +9,7 @@ import ProductCard from "./productCard";
 export default function ProductSlider({
   instanceRef,
 }: {
-  instanceRef: React.RefObject<any>;
+  instanceRef: React.RefObject<KeenSliderInstance | null>;
 }) {
   const [sliderRef, keenInstanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
