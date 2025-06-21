@@ -3,10 +3,10 @@
 import { useEffect } from "react";
 import { KeenSliderInstance, useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { products } from "@/app/data/product";
-import ProductCard from "./productCard";
+import { todayProducts } from "@/app/data/todayProduct";
+import TodayCard from "./todayCard";
 
-export default function ProductSlider({
+export default function TodaySlider({
   instanceRef,
 }: {
   instanceRef: React.RefObject<KeenSliderInstance | null>;
@@ -32,14 +32,16 @@ export default function ProductSlider({
 
   // Pass the Keen slider instance back to the parent
   useEffect(() => {
-    instanceRef.current = keenInstanceRef.current;
-  }, [keenInstanceRef, instanceRef]);
+    if (keenInstanceRef.current) {
+      instanceRef.current = keenInstanceRef.current;
+    }
+  }, [instanceRef, keenInstanceRef]);
 
   return (
     <div ref={sliderRef} className="keen-slider mt-4">
-      {products.map((product, index) => (
+      {todayProducts.map((product, index) => (
         <div key={index} className="keen-slider__slide">
-          <ProductCard {...product} />
+          <TodayCard {...product} />
         </div>
       ))}
     </div>

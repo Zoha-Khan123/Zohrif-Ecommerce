@@ -30,11 +30,11 @@
 }
 
 .input-box {
-  @apply flex justify-center items-center p-1 sm:p-2 rounded-sm bg-light text-[10px] sm:text-sm;
+  @apply flex justify-center items-center p-1  sm:p-2 rounded-sm bg-light text-[7px] sm:text-sm;
 }
 
 .input-box input {
-  @apply border-none outline-none placeholder:text-[9px] sm:placeholder:text-[12px];
+  @apply border-none outline-none placeholder:text-[5px] sm:placeholder:text-[12px];
 }
 
 .icons {

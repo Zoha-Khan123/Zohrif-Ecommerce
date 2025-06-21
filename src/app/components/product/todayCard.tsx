@@ -1,11 +1,11 @@
-// components/ProductCard.tsx
-import { Product } from "@/app/types/product";
+"use client";
+import { TodayProduct } from "@/app/types/types";
 import { Star } from "lucide-react";
 import { Eye, Heart } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function ProductCard({
+export default function TodayCard({
   image,
   name,
   price,
@@ -14,13 +14,12 @@ export default function ProductCard({
   rating,
   reviews,
   isLiked,
-}: Product) {
+}: TodayProduct) {
   const [liked, setLiked] = useState(isLiked);
 
   return (
-    <div className="">
-
-      <div className="bg-light relative w-full h-[200px] flex justify-center items-center">
+    <>
+      <div className="group bg-light relative w-full h-[200px] flex justify-center items-center">
         {/* Image */}
         <div className="flex justify-center items-center w-[80%] h-[80%] rounded-md overflow-hidden">
           <Image
@@ -46,7 +45,7 @@ export default function ProductCard({
               aria-label="Like product"
             >
               <Heart
-                className={`w-4 h-4 transition ${liked ? "fill-red-500 text-red-500" : "text-black"}`}
+                className={`w-4 h-4 transition cursor-pointer ${liked ? "fill-red-500 text-red-500" : "text-black"}`}
               />
             </button>
 
@@ -54,10 +53,14 @@ export default function ProductCard({
               className="bg-white flex justify-center items-center p-2 rounded-full shadow hover:text-blue-500 transition"
               aria-label="View product"
             >
-              <Eye className="w-4 h-4" />
+              <Eye className="w-4 h-4 cursor-pointer" />
             </button>
           </div>
         </div>
+
+      <div className="absolute bottom-0 left-0 w-full bg-black cursor-pointer text-white text-center py-2 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        Add to Cart
+      </div>
       </div>
 
       {/* Product Name */}
@@ -65,7 +68,9 @@ export default function ProductCard({
         <h1 className="text-[10px] sm:text-sm">{name}</h1>
         <div className="flex gap-2">
           <p className="text-red text-[10px] sm:text-sm">{price}</p>
-          <p className="text-gray-500 line-through text-[10px] sm:text-sm">{oldPrice}</p>
+          <p className="text-gray-500 line-through text-[10px] sm:text-sm">
+            {oldPrice}
+          </p>
         </div>
         <div className="flex items-center gap-1 text-yellow-500 text-sm">
           {Array.from({ length: 5 }).map((_, i) => (
@@ -79,6 +84,6 @@ export default function ProductCard({
           <span className="text-xs text-gray-500">({reviews})</span>
         </div>
       </div>
-    </div>
+    </>
   );
 }
