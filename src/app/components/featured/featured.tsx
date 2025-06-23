@@ -28,7 +28,7 @@ const Featured = () => {
         {/* Right Column */}
         <div className="grid grid-rows-2 gap-6">
           {/* Top Full Width */}
-          <div className="relative h-[190px] overflow-hidden rounded-lg bg-[#0d0d0d]">
+          <div className="relative right-0 h-[190px] overflow-hidden rounded-lg bg-[#0d0d0d]">
             <Image
               src="/featured-02.png"
               alt="Women's Collection"

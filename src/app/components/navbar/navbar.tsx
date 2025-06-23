@@ -28,7 +28,7 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><Link href="/home">Home</Link></li>
           <li><Link href="/about">About</Link></li>
-          <li><Link href="/signup">Signup</Link></li>
+          <li><Link href="/auth/signup">Signup</Link></li>
           <li className="categories">Categories<span><MdKeyboardArrowDown /></span></li>
         </ul>
 

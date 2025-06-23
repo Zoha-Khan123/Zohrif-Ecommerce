@@ -3,7 +3,7 @@ import AuthForm from "@/app/components/authForm.tsx/authForm";
 
 export default function LoginPage() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div>
       <AuthForm
         title="Log in to Exclusive"
         subtitle="Enter your details below"

@@ -65,7 +65,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="text-center text-[#3b3b3b] mt-10 border-t border-[#3b3b3b] pt-4">
-        © Copyright Rimel 2022. All rights reserved
+        © Copyright Zohrif {new Date().getFullYear()} All rights reserved
       </div>
     </footer>
   );
