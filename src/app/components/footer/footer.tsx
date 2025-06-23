@@ -54,24 +54,14 @@ const Footer = () => {
         </div>
 
         {/* Column 5 - Download App */}
-        <div className="space-y-5">
-          <h1 className="text-lg font-bold">Download App</h1>
-          <p className="text-[10px]">Save $3 with App New User Only</p>
-          <div className="flex gap-2 ">
-            <Image src="/qr-code.png" alt="QR" width={80} height={80} />
-            <div className="flex flex-col gap-2">
-              <Image src="/google-play.png" alt="Google Play" width={100} height={30} />
-              <Image src="/app-store.png" alt="App Store" width={100} height={30} />
-            </div>
-          </div>
-          <div className="flex gap-4 text-white text-xl mt-4">
+          <div className="flex flex-col  gap-4 text-white text-xl ">
+          <h1 className="text-lg font-bold">Social Links</h1>
             <FaFacebookF />
             <FaTwitter />
             <FaInstagram />
             <FaLinkedinIn />
           </div>
         </div>
-      </div>
 
       {/* Footer Bottom */}
       <div className="text-center text-[#3b3b3b] mt-10 border-t border-[#3b3b3b] pt-4">

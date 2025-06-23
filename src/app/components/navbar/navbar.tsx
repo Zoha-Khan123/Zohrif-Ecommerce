@@ -55,6 +55,8 @@ const Navbar = () => {
         <li>Sign Up</li>
         <li className="categories">Categories <span> <MdKeyboardArrowDown /></span></li>
       </ul>
+
+       <div className="w-full h-[1px] rounded-sm bg-gray-400"></div>
     </>
   );
 };

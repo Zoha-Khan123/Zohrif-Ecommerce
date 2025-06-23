@@ -25,3 +25,16 @@ export interface Services {
   heading : string ,
   paragraph : string,
 }
+
+export type AuthFormProps = {
+  title: string;
+  subtitle: string;
+  mainButtonLabel: string;
+  showGoogle: boolean;
+  showForgot: boolean;
+  redirectText: string;
+  redirectLinkLabel: string;
+  redirectPath: string;
+  imageSrc: string;
+  imageAlt?: string;
+};

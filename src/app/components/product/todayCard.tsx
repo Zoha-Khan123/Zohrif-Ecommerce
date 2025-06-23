@@ -18,8 +18,8 @@ export default function TodayCard({
   const [liked, setLiked] = useState(isLiked);
 
   return (
-    <>
-      <div className="group bg-light relative w-full h-[200px] flex justify-center items-center">
+    <div className="group">
+      <div className=" bg-light relative w-full h-[200px] flex justify-center items-center">
         {/* Image */}
         <div className="flex justify-center items-center w-[80%] h-[80%] rounded-md overflow-hidden">
           <Image
@@ -58,7 +58,7 @@ export default function TodayCard({
           </div>
         </div>
 
-      <div className="absolute bottom-0 left-0 w-full bg-black cursor-pointer text-white text-center py-2 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute bottom-0 left-0 w-full active:opacity-100 bg-black cursor-pointer text-white text-center py-2 text-xs sm:text-sm lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         Add to Cart
       </div>
       </div>
@@ -84,6 +84,6 @@ export default function TodayCard({
           <span className="text-xs text-gray-500">({reviews})</span>
         </div>
       </div>
-    </>
+    </div>
   );
 }
