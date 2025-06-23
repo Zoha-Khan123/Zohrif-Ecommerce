@@ -1,6 +1,5 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import Image from "next/image";
 import { BiRightArrow } from "react-icons/bi";
 
 const Footer = () => {

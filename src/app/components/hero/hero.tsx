@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Pagination } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
+import Image from "next/image"
 
 export default function HeroSlider() {
   return (
@@ -14,14 +15,18 @@ export default function HeroSlider() {
       className="w-full h-[400px]"
     >
       <SwiperSlide>
-        <img
+        <Image
+          width={1000}
+          height={500}
           src="/hero-image-01.jpg"
           alt="Image 1"
           className="w-full h-full object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
-        <img
+        <Image
+          width={1000}
+          height={500}
           src="/hero-image-02.jpg"
           alt="Image 2"
           className="w-full h-full object-cover"

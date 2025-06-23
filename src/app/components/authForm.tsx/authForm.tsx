@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image"
 import { AuthFormProps } from "@/app/types/types";
 import Button from "../button/button";
@@ -12,9 +11,6 @@ const AuthForm: React.FC<AuthFormProps> = ({
   mainButtonLabel,
   showGoogle,
   showForgot,
-  redirectText,
-  redirectLinkLabel,
-  redirectPath,
   imageSrc,
   imageAlt = 'Auth Image',
 }) => {

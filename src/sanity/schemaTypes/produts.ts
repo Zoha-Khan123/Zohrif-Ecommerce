@@ -1,5 +1,5 @@
 import type { Rule as ValidationRule } from 'sanity'
-export default {
+ const products = {
   name: 'product',
   title: 'Product',
   type: 'document',
@@ -183,3 +183,5 @@ export default {
     },
   },
 };
+
+export default products;

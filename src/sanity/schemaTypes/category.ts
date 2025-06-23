@@ -1,6 +1,6 @@
 // sanity/schemas/category.js
 import type { Rule as ValidationRule } from "sanity";
-export default {
+const category = {
   name: "category",
   title: "Category",
   type: "document",
@@ -28,3 +28,5 @@ export default {
     },
   ],
 };
+
+export default category;
