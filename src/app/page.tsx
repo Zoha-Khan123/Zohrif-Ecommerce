@@ -20,6 +20,7 @@ const page = () => {
       <ExploreProduct/>
       <Featured/>
       <Services/>
+      <h1 className='text-3xl font-bold text-center mt-10'>Git repo test</h1>
     </>
   )
 }
