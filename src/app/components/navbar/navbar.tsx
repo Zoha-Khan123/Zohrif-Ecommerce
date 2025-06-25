@@ -15,10 +15,6 @@ const Navbar = () => {
       {/* Top-bar */}
       <div className="top-bar">
         <p>Carry Confidence with Zohrif Wallets Free Shipping + 50% Off for a Limited Time </p>
-        {/* <select className="select-box">
-          <option>English</option>
-          <option>Urdu</option>
-        </select> */}
       </div>
 
       {/* Navbar */}
@@ -50,9 +46,9 @@ const Navbar = () => {
 
       {/* Responsive */}
       <ul className={`responsive-category ${toggle ? "right-0" : "right-[-100%]"}`}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Sign Up</li>
+        <li><Link href="/"> Home</Link></li>
+        <li><Link href="/about"> About</Link></li>
+        <li><Link href="/auth/login"> Login</Link></li>
         <li className="categories">Categories <span> <MdKeyboardArrowDown /></span></li>
       </ul>
 
