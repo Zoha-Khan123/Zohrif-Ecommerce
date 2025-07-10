@@ -12,9 +12,10 @@ export default function LoginPage() {
         showForgot={true}
         redirectText="Don't have an account?"
         redirectLinkLabel="Sign Up"
-        redirectPath="/signup"
+        redirectPath="/auth/signup"
         imageSrc="/auth-image.png"
         imageAlt="Login illustration"
+        showNameField={false}
       />
     </div>
   );

@@ -37,4 +37,5 @@ export type AuthFormProps = {
   redirectPath: string;
   imageSrc: string;
   imageAlt?: string;
+  showNameField?: boolean;
 };

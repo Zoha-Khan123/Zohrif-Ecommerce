@@ -11,9 +11,10 @@ export default function SignupPage() {
         showForgot={false}
         redirectText="Already have an account?"
         redirectLinkLabel="Log In"
-        redirectPath="/login"
+        redirectPath="/auth/login"
         imageSrc="/auth-image.png"
         imageAlt="Signup illustration"
+        showNameField={true}
       />
     </div>
   );

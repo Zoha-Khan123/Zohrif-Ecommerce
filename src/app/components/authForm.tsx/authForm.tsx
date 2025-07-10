@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image"
 import { AuthFormProps } from "@/app/types/types";
 import Button from "../button/button";
+import Link from "next/link";
 
 
 const AuthForm: React.FC<AuthFormProps> = ({
@@ -13,6 +14,10 @@ const AuthForm: React.FC<AuthFormProps> = ({
   showForgot,
   imageSrc,
   imageAlt = 'Auth Image',
+  showNameField,
+  redirectText,
+  redirectLinkLabel,
+  redirectPath,
 }) => {
   return (
    <div className="my-8 flex justify-around gap-16 items-center md:pr-20 min-h-[calc(100vh-120px)]">
@@ -30,9 +35,11 @@ const AuthForm: React.FC<AuthFormProps> = ({
       <p>{subtitle}</p>
       </div>
       <div className="flex flex-col w-full space-y-7 mb-6">
+      {showNameField && (
       <input type="text" placeholder="Name" className="outline-none border-b-gray-400 border-b-1"/>
-      <input type="email" placeholder="Enter Email" className="  outline-none border-b-gray-400 border-b-1"/>
-      <input type="password" placeholder="Password" className=" outline-none border-b-gray-400 border-b-1"/>
+      )}
+      <input type="email" placeholder="Enter Email" className="outline-none border-b-gray-400 border-b-1"/>
+      <input type="password" placeholder="Password" className="outline-none border-b-gray-400 border-b-1"/>
       
       </div>
       <Button customStyle="w-full  text-white p-4 bg-red">{mainButtonLabel}</Button>
@@ -48,9 +55,16 @@ const AuthForm: React.FC<AuthFormProps> = ({
 
          {showGoogle && (
           <Button customStyle="w-full border p-4 rounded flex justify-center items-center gap-2">
-            <img src="/google-icon.png" alt="Google" className="h-5 w-5" />
+            <Image src="/google-icon.png" alt="Google" className="h-5 w-5" />
             Sign up with Google
           </Button>)}
+
+           <p className="text-gray-600 flex gap-4 justify-center items-center mt-4">
+            {redirectText}{' '}
+            <Link href={redirectPath} className="border-b-2 border-b-gray-600">
+              {redirectLinkLabel}
+            </Link>
+          </p>  
     </div>
 
 

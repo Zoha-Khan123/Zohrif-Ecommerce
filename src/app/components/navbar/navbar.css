@@ -21,10 +21,11 @@
 .nav-links li {
   @apply px-4 py-2 rounded-sm transition-all duration-300 hover:bg-light;
 }
-.categories {
-  @apply flex justify-center items-center;
-}
 
+
+.category-and-dropdown{
+  @apply flex justify-center
+}
 .searchbox-and-icons {
   @apply flex justify-between items-center gap-2 sm:gap-4 hover:cursor-pointer;
 }

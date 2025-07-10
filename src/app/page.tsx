@@ -20,6 +20,7 @@ const page = () => {
       <ExploreProduct/>
       <Featured/>
       <Services/>
+      
     </>
   )
 }

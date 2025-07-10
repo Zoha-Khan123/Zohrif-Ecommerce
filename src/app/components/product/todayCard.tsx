@@ -1,9 +1,9 @@
 "use client";
 import { TodayProduct } from "@/app/types/types";
-import { Star } from "lucide-react";
 import { Eye, Heart } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import Stars from "../stars/stars";
 
 export default function TodayCard({
   image,
@@ -72,17 +72,7 @@ export default function TodayCard({
             {oldPrice}
           </p>
         </div>
-        <div className="flex items-center gap-1 text-yellow-500 text-sm">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Star
-              key={i}
-              className={`w-4 h-4 ${
-                i < Math.round(rating) ? "fill-yellow-500" : "text-gray-300"
-              }`}
-            />
-          ))}
-          <span className="text-xs text-gray-500">({reviews})</span>
-        </div>
+       <Stars rating={rating} reviews={reviews}/>
       </div>
     </div>
   );
