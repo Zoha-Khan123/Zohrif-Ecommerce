@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   useKeenSlider,
@@ -7,6 +8,16 @@ import {
 import "keen-slider/keen-slider.min.css";
 import Image from "next/image";
 
+// Array of image paths (repeated images)
+const imagePaths = [
+  "/detailImage-01.png",
+  "/detailImage-02.png",
+  "/detailImage-03.png",
+  "/detailImage-04.png",
+  "/detailImage-05.png",
+];
+
+// Thumbnail plugin
 export function DetailPageSlider(
   mainRef: React.RefObject<KeenSliderInstance | null>
 ): KeenSliderPlugin {
@@ -42,10 +53,12 @@ export function DetailPageSlider(
   };
 }
 
+// Main component
 export default function App() {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
   });
+
   const [thumbnailRef] = useKeenSlider<HTMLDivElement>(
     {
       initial: 0,
@@ -59,103 +72,40 @@ export default function App() {
 
   return (
     <>
+      {/* Main Slider */}
       <div ref={sliderRef} className="keen-slider w-full h-[300px] sm:h-[500px]">
-        <div className="keen-slider__slide number-slide1 flex justify-center items-center w-full h-auto">
-          <Image
-            src="/detailImage-01.png"
-            alt="Image"
-            width={400}
-            height={400}
-            className="object-contain w-[300px] sm:w-[500px]"
-          />
-        </div>
-        <div className="keen-slider__slide number-slide1 flex justify-center items-center w-full h-auto lg:h-[300px] bg-gray-100">
-          <Image
-            src="/detailImage-02.png"
-            alt="Image"
-            width={400}
-            height={400}
-            className="w-[300px] sm:w-[500px] object-contain"
-          />
-        </div>
-        <div className="keen-slider__slide number-slide1 flex justify-center items-center w-full h-auto bg-gray-100 ">
-          <Image
-            src="/detailImage-03.png"
-            alt="Image"
-            width={400}
-            height={400}
-            className="w-[300px] sm:w-[500px] object-contain"
-          />
-        </div>
-        <div className="keen-slider__slide number-slide1 flex justify-center items-center w-full h-auto bg-gray-100">
-          <Image
-            src="/detailImage-04.png"
-            alt="Image"
-            width={400}
-            height={400}
-            className="w-[300px] sm:w-[500px] object-contain"
-          />
-        </div>
-        <div className="keen-slider__slide number-slide1 flex justify-center items-center w-full h-auto bg-gray-100">
-          <Image
-            src="/detailImage-05.png"
-            alt="Image"
-            width={400}
-            height={400}
-            className="w-[300px] sm:w-[500px] "
-          />
-        </div>
+        {imagePaths.map((src, index) => (
+          <div
+            key={index}
+            className="keen-slider__slide number-slide1 flex justify-center items-center w-full h-auto bg-gray-100"
+          >
+            <Image
+              src={src}
+              alt={`Image ${index + 1}`}
+              width={400}
+              height={400}
+              className="object-contain w-[300px] sm:w-[500px]"
+            />
+          </div>
+        ))}
       </div>
 
+      {/* Thumbnail Slider */}
       <div
         ref={thumbnailRef}
         className="keen-slider thumbnail w-full flex justify-between"
       >
-        <div className="keen-slider__slide">
-          <Image
-            alt="Image"
-            width={120}
-               src="/detailImage-01.png"
-         height={120}
-            className="w-[150px] bg-gray-100 h-[80px] sm:h-[100px] p-2 object-contain cursor-pointer"
-          />
-        </div>
-        <div className="keen-slider__slide">
-          <Image
-            src="/detailImage-02.png"
-            alt="Image"
-            width={120}
-            height={120}
-            className="w-[150px] bg-gray-100 h-[80px] sm:h-[100px] p-2 object-contain cursor-pointer"
-          />
-        </div>
-        <div className="keen-slider__slide">
-          <Image
-            src="/detailImage-03.png"
-            alt="Image"
-            width={120}
-            height={120}
-            className="w-[150px] bg-gray-100  h-[80px] sm:h-[100px] p-2 object-contain cursor-pointer"
-          />
-        </div>
-        <div className="keen-slider__slide">
-          <Image
-            src="/detailImage-04.png"
-            alt="Image"
-            width={120}
-            height={120}
-            className="w-[150px] bg-gray-100  h-[80px] sm:h-[100px] p-2 object-contain cursor-pointer"
-          />
-        </div>
-        <div className="keen-slider__slide">
-          <Image
-            src="/detailImage-05.png"
-            alt="Image"
-            width={120}
-            height={120}
-            className="w-[150px] bg-gray-100  h-[80px] sm:h-[100px] p-2 object-contain cursor-pointer"
-          />
-        </div>
+        {imagePaths.map((src, index) => (
+          <div key={index} className="keen-slider__slide">
+            <Image
+              src={src}
+              alt={`Thumbnail ${index + 1}`}
+              width={120}
+              height={120}
+              className="w-[150px] bg-gray-100 h-[80px] sm:h-[100px] p-2 object-contain cursor-pointer"
+            />
+          </div>
+        ))}
       </div>
     </>
   );

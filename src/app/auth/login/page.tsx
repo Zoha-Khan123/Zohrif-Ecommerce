@@ -10,7 +10,7 @@ export default function LoginPage() {
         mainButtonLabel="Log In"
         showGoogle={false}
         showForgot={true}
-        redirectText="Don't have an account?"
+        redirectText="Don't have an account ?"
         redirectLinkLabel="Sign Up"
         redirectPath="/auth/signup"
         imageSrc="/auth-image.png"

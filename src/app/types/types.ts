@@ -11,8 +11,8 @@ export interface TodayProduct {
   discount: number;
   rating: number;
   reviews: number;
-  isLiked?: boolean,
-  views?: number;     
+  isLiked?: boolean;
+  views?: number;
 }
 
 export interface CategoriesProduct {
@@ -21,9 +21,9 @@ export interface CategoriesProduct {
 }
 
 export interface Services {
-  image : string,
-  heading : string ,
-  paragraph : string,
+  image: string;
+  heading: string;
+  paragraph: string;
 }
 
 export type AuthFormProps = {
@@ -39,3 +39,18 @@ export type AuthFormProps = {
   imageAlt?: string;
   showNameField?: boolean;
 };
+
+export interface AboutProduct {
+  image: string;
+  num: number;
+  name: string;
+}
+
+export interface AboutSpecilaist {
+  image: string;
+  name: string;
+  profession: string;
+  twitter: string;
+  instagram: string;
+  linkedin: string;
+}

@@ -9,7 +9,7 @@ export default function SignupPage() {
         mainButtonLabel="Create Account"
         showGoogle={true}
         showForgot={false}
-        redirectText="Already have an account?"
+        redirectText="Already have an account ?"
         redirectLinkLabel="Log In"
         redirectPath="/auth/login"
         imageSrc="/auth-image.png"

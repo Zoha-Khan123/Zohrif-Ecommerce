@@ -41,15 +41,15 @@ const Navbar = () => {
       {/* Navbar */}
       <div className="navbar">
         <div>
-          <h1 className="brand-name">Zohrif</h1>
+          <Link href="/"><h1 className="brand-name">Zohrif</h1></Link>
         </div>
 
         <ul className="nav-links">
           <li>
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/pages/about">About</Link>
           </li>
           <li>
             <Link href="/auth/signup">Signup</Link>
@@ -90,9 +90,9 @@ const Navbar = () => {
           </div>
           <div className="icons">
             <CiHeart />
-            <PiShoppingCart />
+            <Link href="/pages/cart"><PiShoppingCart /></Link>
             <div>
-              <MdOutlineAccountCircle />
+              <Link href="/pages/account"><MdOutlineAccountCircle /></Link>
             </div>
           </div>
           {/* Icon wrapper */}
@@ -114,10 +114,10 @@ const Navbar = () => {
           <Link href="/"> Home</Link>
         </li>
         <li>
-          <Link href="/about"> About</Link>
+          <Link href="/pages/about">About</Link>
         </li>
         <li>
-          <Link href="/auth/login"> Login</Link>
+          <Link href="/auth/login">Login</Link>
         </li>
         <li className="categories group relative">
           {/* Whole container: trigger + dropdown */}

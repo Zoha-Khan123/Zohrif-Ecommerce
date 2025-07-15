@@ -55,11 +55,11 @@ const AuthForm: React.FC<AuthFormProps> = ({
 
          {showGoogle && (
           <Button customStyle="w-full border p-4 rounded flex justify-center items-center gap-2">
-            <Image src="/google-icon.png" alt="Google" className="h-5 w-5" />
+            <Image src="/google-icon.png" alt="Google" width={100} height={100} className="h-5 w-5" />
             Sign up with Google
           </Button>)}
 
-           <p className="text-gray-600 flex gap-4 justify-center items-center mt-4">
+           <p className="text-gray-600 text-sm flex gap-2 justify-center items-center mt-4">
             {redirectText}{' '}
             <Link href={redirectPath} className="border-b-2 border-b-gray-600">
               {redirectLinkLabel}

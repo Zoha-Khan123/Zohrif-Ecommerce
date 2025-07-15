@@ -2,7 +2,7 @@ import React from 'react'
 
 interface MyTextProps  {
     heading : string ;
-    paragraph : string ;
+    paragraph? : string ;
 }
 
 const Headings : React.FC<MyTextProps> = ({heading,paragraph}) => {
