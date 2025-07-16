@@ -42,7 +42,7 @@ const DetailPage = () => {
             <span>|</span>
             <p className="text-green-500">In Stock</p>
           </div>
-          <p>$192.00</p>
+          <p className="font-bold text-3xl">$ 192.00</p>
           <p>
             PlayStation 5 Controller Skin High quality vinyl with air channel
             adhesive for easy bubble free install & mess free removal Pressure

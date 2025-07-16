@@ -1,9 +1,11 @@
 "use client";
 import { TodayProduct } from "@/app/types/types";
-import { Eye, Heart } from "lucide-react";
+import { Eye, Heart, Bot } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import Stars from "../stars/stars";
+import Link from "next/link";
+
 
 export default function TodayCard({
   image,
@@ -18,7 +20,7 @@ export default function TodayCard({
   const [liked, setLiked] = useState(isLiked);
 
   return (
-    <div className="group">
+    <Link href="/pages/detailPage" className="group">
       <div className=" bg-light relative w-full h-[200px] flex justify-center items-center">
         {/* Image */}
         <div className="flex justify-center items-center w-[80%] h-[80%] rounded-md overflow-hidden">
@@ -58,9 +60,10 @@ export default function TodayCard({
           </div>
         </div>
 
-      <div className="absolute bottom-0 left-0 w-full active:opacity-100 bg-black cursor-pointer text-white text-center py-2 text-xs sm:text-sm lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        Add to Cart
-      </div>
+        <div className="flex justify-between items-center absolute bottom-0 left-0 w-full h-[40px] active:opacity-100 bg-black cursor-pointer text-white text-center text-xs sm:text-sm lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <p className="flex-1"> Add to Cart</p>
+          <Bot className="w-[80px] h-full bg-violet-500 " />
+        </div>
       </div>
 
       {/* Product Name */}
@@ -72,8 +75,8 @@ export default function TodayCard({
             {oldPrice}
           </p>
         </div>
-       <Stars rating={rating} reviews={reviews}/>
+        <Stars rating={rating} reviews={reviews} />
       </div>
-    </div>
+    </Link>
   );
 }

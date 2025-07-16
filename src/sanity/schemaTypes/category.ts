@@ -1,4 +1,3 @@
-// sanity/schemas/category.js
 import type { Rule as ValidationRule } from "sanity";
 const category = {
   name: "category",
